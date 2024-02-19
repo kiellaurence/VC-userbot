@@ -16,17 +16,17 @@ async def help_menu_logo(answer):
     answer.append(
         InlineQueryResultPhoto(
             photo_url=f"{thumb_image}",
-            title="🥀 Help Menu ✨",
+            title="ðŸ¥€ Help Menu âœ¨",
             thumb_url=f"{thumb_image}",
-            description=f"🥀 Open Help Menu Of VC-Userbot ✨...",
+            description=f"ðŸ¥€ Open Help Menu Of VC-Userbot âœ¨...",
             caption=f"""
-**🥀 Welcome To Help Menu Of
-VC Userbot » {__version__} ✨...
+**ðŸ¥€ Welcome To Help Menu Of
+VC Userbot Â» {__version__} âœ¨...
 
-Click On Below 🌺 Buttons To
+Click On Below ðŸŒº Buttons To
 Get Userbot Commands.
 
-🌷Powered By : [ �N1xD�LL](https://t.me/DollxSpam_BOT).**
+ðŸŒ·Powered By : [N1xDÕLL](https://t.me/DollxSpam_BOT).**
             """,
             reply_markup=InlineKeyboardMarkup(button),
         )
@@ -39,15 +39,15 @@ async def help_menu_text(answer):
     button = paginate_plugins(0, plugs, "help")
     answer.append(
         InlineQueryResultArticle(
-            title="🥀 Help Menu ✨",
+            title="ðŸ¥€ Help Menu âœ¨",
             input_message_content=InputTextMessageContent(f"""
-**🥀 Welcome To Help Menu Of
-VC Userbot » {__version__} ✨...
+**ðŸ¥€ Welcome To Help Menu Of
+VC Userbot Â» {__version__} âœ¨...
 
-Click On Below 🌺 Buttons To
+Click On Below ðŸŒº Buttons To
 Get VC Commands.
 
-🌷Powered By : [ �N1xD�LL](https://t.me/DollxSpam_BOT).**""",
+ðŸŒ·Powered By : [ ¤N1xDÕLL](https://t.me/DollxSpam_BOT).**""",
             disable_web_page_preview=True
             ),
             reply_markup=InlineKeyboardMarkup(button),
