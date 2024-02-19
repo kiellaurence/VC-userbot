@@ -58,7 +58,7 @@ USERBOT_PICTURE = getenv("USERBOT_PICTURE", "https://telegra.ph/file/90128affe4e
 
 # Don't Edit This Codes From This Line
 
-LOGGER = logging.getLogger("Genius")
+LOGGER = logging.getLogger("vcuserbot")
 runtime = time.time()
 
 FLOODXD = {}
