@@ -78,9 +78,9 @@ def inline_wrapper(func):
                     results=[
                         (
                             InlineQueryResultPhoto(
-                                photo_url=f"https://telegra.ph/file/90128affe4ed7b70b10ab.jpg",
+                                photo_url=f"https://te.legra.ph/file/d8063209266dce7654c0d.jpg",
                                 title="🥀 VC Userbot ✨",
-                                thumb_url=f"https://telegra.ph/file/90128affe4ed7b70b10ab.jpg",
+                                thumb_url=f"https://te.legra.ph/file/d8063209266dce7654c0d.jpg",
                                 description=f"🌷 Deploy Your Own UC-Userbot 🌿...",
                                 caption=f"<b>🥀 Welcome » To » VC 🌷\n✅ Userbot {__version__} ✨...</b>",
                                 reply_markup=InlineKeyboardMarkup(button),
