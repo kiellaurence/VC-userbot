@@ -11,7 +11,7 @@ async def help_menu_logo(answer):
     if image:
         thumb_image = image
     else:
-        thumb_image = "https://telegra.ph/file/90128affe4ed7b70b10ab.jpg"
+        thumb_image = "https://te.legra.ph/file/d8063209266dce7654c0d.jpg"
     button = paginate_plugins(0, plugs, "help")
     answer.append(
         InlineQueryResultPhoto(
