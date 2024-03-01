@@ -55,6 +55,7 @@ async def help_button(client, query):
     prev_match = re.match(r"help_prev\((.+?)\)", query.data)
     next_match = re.match(r"help_next\((.+?)\)", query.data)
     back_match = re.match(r"help_back", query.data)
+    HELP_PIC = "https://telegra.ph/file/0a90b9ca23989258de472.jpg"
     top_text = f"""
 **🥀 Welcome To Help Menu Of
 VC Userbot » {__version__} ✨...
