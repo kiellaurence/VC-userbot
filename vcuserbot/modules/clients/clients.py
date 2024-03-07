@@ -1,4 +1,3 @@
-1253258650
 import os, sys
 
 from pyrogram import Client
