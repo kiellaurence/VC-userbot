@@ -39,7 +39,7 @@ LOG_GROUP_ID = int(getenv("LOG_GROUP_ID", 0))
 
 # OPTIONAL VARIABLES
 SESSION_STRING = getenv("SESSION_STRING", None)
-COMMAND_PREFIXES = list(getenv("COMMAND_PREFIXES", ". !").split())
+COMMAND_PREFIXES = list(getenv("COMMAND_PREFIXES", "").split())
 
 
 
