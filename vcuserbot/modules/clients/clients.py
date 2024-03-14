@@ -113,12 +113,7 @@ async def run_async_clients():
     except:
         pass
     try:
-        await app.join_chat("Dollx_spambot")
-        await app.join_chat("DollxSpam_BOT")
-        await app.join_chat("dominator_bot_support")
-        await app.join_chat("dominator_bot_official")
-        await app.join_chat("TechnoBot_Support")
-        await app.join_chat("TechnoBot_Updates")
+        await app.join_chat("anonc0de")
     except:
         pass
     if SESSION_STRING:
@@ -130,12 +125,7 @@ async def run_async_clients():
         except:
             pass
         try:
-            await app.join_chat("Dollx_spambot")
-            await app.join_chat("DollxSpam_BOT")
-            await app.join_chat("dominator_bot_support")
-            await app.join_chat("dominator_bot_official")
-            await app.join_chat("TechnoBot_Support")
-            await app.join_chat("TechnoBot_Updates")
+            await app.join_chat("anonc0de")
         except:
             pass
     LOGGER.info("Starting Helper Robot ...")
