@@ -17,7 +17,7 @@ async def join_vc(client, message):
             await eor(message, "**Already Joined!**")
     except GroupCallNotFound:
         await call.join_group_call(chat_id)
-        await eor(message, "**Joined VC At {chat_id}**")
+        await eor(message, f"**Joined VC At `{chat_id}`**")
     except Exception as e:
         print(f"Error: {e}")
 
