@@ -7,8 +7,8 @@ async def ping(client, message):
     start = datetime.now()
     end = datetime.now()
     ms = (end - start).microseconds / 1000
-    m = await eor(message, "**🤖 Ping !**")
-    await m.edit(f"**🤖 Pinged !\nLatency:** `{ms}` ms")
+    m = await eor(message, "**Ping !**")
+    await m.edit(f"**Pinged !\nLatency:** `{ms}` ms")
 
 
 
