@@ -40,7 +40,7 @@ async def quotly(client: Client, message: Message):
                 return
 
             try:
-                await message.edit(message, f"```Making a Quote\nProcessing {}%```".format(progress))
+                await message.edit("```Making a Quote\nProcessing {}%```".format(progress))
             except:
                 await message.edit("ERROR")
 
