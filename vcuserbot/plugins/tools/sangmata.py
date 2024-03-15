@@ -25,7 +25,7 @@ async def sg(client: Client, message: Message):
         try:
             user = await client.get_users(args)
         except Exception:
-            return await eor(f"`Please specify a valid user!`")
+            return await eor(message, f"`Please specify a valid user!`")
     bot = "SangMata_BOT"
     try:
         await client.send_message(bot, f"history {user.id}")
