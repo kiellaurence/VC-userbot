@@ -21,11 +21,12 @@ from pyrogram.types import *
 @sudo_users_only
 async def sg(client: Client, message: Message):
     args = await extract_user(message)
+    lol = await edit_or_reply(message, "`Processing...`")
     if args:
         try:
             user = await client.get_users(args)
         except Exception:
-            return await eor(message, f"`Please specify a valid user!`")
+            return await lol.edit(message, f"`Please specify a valid user!`")
     bot = "SangMata_BOT"
     try:
         await client.send_message(bot, f"history {user.id}")
@@ -36,7 +37,7 @@ async def sg(client: Client, message: Message):
 
     async for stalk in client.search_messages(bot, query="Name", limit=1):
         if not stalk:
-            await eor(message, f"**Orang Ini Belum Pernah Mengganti Namanya**")
+            await lol.edit(message, f"**Orang Ini Belum Pernah Mengganti Namanya**")
             return
         elif stalk:
             await stalk.delete()
