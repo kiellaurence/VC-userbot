@@ -15,10 +15,8 @@ from pyrogram import filters
 from pyrogram.errors import YouBlockedUser
 from pyrogram.types import *
 
-from config import COMMAND_PREFIXES as cmd
 
-
-@app.on_message(cdx(["sg", "sa", "sangmata"], cmd) & filters.me)
+@app.on_message(cdx(["sg", "sa", "sangmata"]) & filters.me)
 async def sg(client: Client, message: Message):
     args = await extract_user(message)
     lol = await edit_or_reply(message, "`Processing...`")
