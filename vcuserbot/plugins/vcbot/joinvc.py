@@ -8,6 +8,7 @@ from pytgcalls.exceptions import GroupCallNotFound
 @sudo_users_only
 async def join_vc(client, message):
     chat_id = message.chat.id
+    title = message.chat.title
     try:
         a = await call.get_call(chat_id)
         if (a.status == "not_playing"
@@ -17,7 +18,7 @@ async def join_vc(client, message):
             await eor(message, "**Already Joined!**")
     except GroupCallNotFound:
         await call.join_group_call(chat_id)
-        await eor(message, f"**Joined VC At `{chat_id}`**")
+        await eor(message, f"**Joined VC At `{title}`**")
     except Exception as e:
         print(f"Error: {e}")
 
