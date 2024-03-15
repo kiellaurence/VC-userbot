@@ -17,7 +17,7 @@ async def quotly(client: Client, message: Message):
         await message.edit("Reply to any users text message")
         return
 
-    await message.edit(message, f"```Making a Quote```")
+    await message.edit(message, f"Making a Quote")
 
     await message.reply_to_message.forward("@QuotLyBot")
 
