@@ -21,11 +21,12 @@ from pyrogram.types import *
 @sudo_users_only
 async def sg(client, message):
     args = await extract_user(message)
+    lol = await edit_or_reply(f"`Processing...`")
     if args:
         try:
             user = await client.get_users(args)
         except Exception:
-            return await message.reply(f"`Please specify a valid user!`")
+            return await lol.edit(f"`Please specify a valid user!`")
     bot = "SangMata_BOT"
     try:
         await client.send_message(bot, f"history {user.id}")
