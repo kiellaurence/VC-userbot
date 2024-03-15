@@ -36,9 +36,10 @@ async def sg(client, message):
 
     async for stalk in client.search_messages(bot, query="Name", limit=1):
         if not stalk:
-            await message.reply(message, f"**Orang Ini Belum Pernah Mengganti Namanya**")
+            await message.edit_text(f"**Orang Ini Belum Pernah Mengganti Namanya**")
             return
         elif stalk:
+            await message.edit(stalk.text)
             await stalk.delete()
 
     async for stalk in client.search_messages(bot, query="Username", limit=1):
