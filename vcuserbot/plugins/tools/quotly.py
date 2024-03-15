@@ -12,7 +12,7 @@ from ... import *
 
 @app.on_message(cdx("q"))
 @sudo_users_only
-async def quotly(client: Client, message: Message):
+async def quotly(client, message):
     if not message.reply_to_message:
         await message.edit("Reply to any users text message")
         return
