@@ -19,7 +19,7 @@ from pyrogram.types import *
 
 @app.on_message(cdx("sg"))
 @sudo_users_only
-async def sg(client, message):
+async def sg(client: Client, message: Message):
     args = await extract_user(message)
     lol = await eor(message, f"`Processing...`")
     if args:
