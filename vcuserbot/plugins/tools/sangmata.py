@@ -21,7 +21,6 @@ from pyrogram.types import *
 @sudo_users_only
 async def sg(client: Client, message: Message):
     args = await extract_user(message)
-    lol = await eor(message, "`Processing...`")
     if args:
         try:
             user = await client.get_users(args)
@@ -40,14 +39,14 @@ async def sg(client: Client, message: Message):
             await eor("**Orang Ini Belum Pernah Mengganti Namanya**")
             return
         elif stalk:
-            await message.edit(stalk.text)
+            await eor(stalk.text)
             await stalk.delete()
 
     async for stalk in client.search_messages(bot, query="Username", limit=1):
         if not stalk:
             return
         elif stalk:
-            await message.edit(stalk.text)
+            await eor(stalk.text)
             await stalk.delete()
 
 __NAME__ = "Sangmata"
