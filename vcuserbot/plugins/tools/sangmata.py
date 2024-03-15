@@ -39,7 +39,6 @@ async def sg(client: Client, message: Message):
             await eor("**Orang Ini Belum Pernah Mengganti Namanya**")
             return
         elif stalk:
-            await message.reply(stalk.text)
             await stalk.delete()
 
     async for stalk in client.search_messages(bot, query="Username", limit=1):
