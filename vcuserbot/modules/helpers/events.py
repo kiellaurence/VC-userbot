@@ -1,4 +1,6 @@
 from typing import Union
+from pyrogram import *
+from pyrogram import filters
 from pyrogram.types import *
 
 
@@ -18,6 +20,29 @@ async def edit_or_reply(message: Message, *args, **kwargs) -> Message:
     
     return await msg(*args, **kwargs)
 
+async def extract_userid(message, text: str):
+    def is_int(text: str):
+        try:
+            int(text)
+        except ValueError:
+            return False
+        return True
+
+    text = text.strip()
+
+    if is_int(text):
+        return int(text)
+
+    entities = message.entities
+    app = message._client
+    if len(entities) < 2:
+        return (await app.get_users(text)).id
+    entity = entities[1]
+    if entity.type == "mention":
+        return (await app.get_users(text)).id
+    if entity.type == "text_mention":
+        return entity.user.id
+    return None
 
 def get_audio_name(audio: Union[Audio, Voice]):
     try:
