@@ -9,7 +9,7 @@
 
 import asyncio
 
-from ..modules.helper.events import edit_or_reply, extract_user
+from ..modules.helpers.events import edit_or_reply, extract_user
 from pyrogram import *
 from pyrogram import filters
 from pyrogram.errors import YouBlockedUser
