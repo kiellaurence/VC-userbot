@@ -11,6 +11,7 @@ from ...modules.utilities import queues
 @sudo_users_only
 async def leave_vc(client, message):
     chat_id = message.chat.id
+    title = message.chat.title
     try:
         a = await call.get_call(chat_id)
         if (a.status == "not_playing"
@@ -22,7 +23,7 @@ async def leave_vc(client, message):
             except QueueEmpty:
                 pass
             await call.leave_group_call(chat_id)
-            await eor(message, f"**Left VC At `{chat_id}`**")
+            await eor(message, f"**Left VC At `{title}`**")
     except GroupCallNotFound:
         await eor(message, "**I am Not in VC!**")
     except Exception as e:
