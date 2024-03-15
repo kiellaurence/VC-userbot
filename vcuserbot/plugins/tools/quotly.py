@@ -2,17 +2,15 @@ import asyncio
 import random
 from asyncio import sleep
 
-from pyrogram import *
 from pyrogram import filters
 from pyrogram.types import Message
-from pyrogram.types import *
 
 from ... import *
 
 
 @app.on_message(cdx("q"))
 @sudo_users_only
-async def quotly(client: Client, message: Message):
+async def quotly(client, message):
     if not message.reply_to_message:
         await message.edit("Reply to any users text message")
         return
