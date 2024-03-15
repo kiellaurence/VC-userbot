@@ -9,6 +9,7 @@
 
 import asyncio
 
+from ... import *
 from ...modules.helpers.events import edit_or_reply, extract_user
 from pyrogram import *
 from pyrogram import filters
@@ -16,7 +17,8 @@ from pyrogram.errors import YouBlockedUser
 from pyrogram.types import *
 
 
-@app.on_message(cdx(["sg", "sa", "sangmata"]) & filters.me)
+@app.on_message(cdx("sg"))
+@sudo_users_only
 async def sg(client: Client, message: Message):
     args = await extract_user(message)
     lol = await edit_or_reply(message, "`Processing...`")
