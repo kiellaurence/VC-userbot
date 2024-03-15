@@ -2,8 +2,10 @@ import asyncio
 import random
 from asyncio import sleep
 
+from pyrogram import *
 from pyrogram import filters
 from pyrogram.types import Message
+from pyrogram.types import *
 
 from ... import *
 
