@@ -21,7 +21,7 @@ from pyrogram.types import *
 @sudo_users_only
 async def sg(client: Client, message: Message):
     args = await extract_user(message)
-    lol = await eor(message, f"`Processing...`")
+    lol = await eor(message, "`Processing...`")
     if args:
         try:
             user = await client.get_users(args)
