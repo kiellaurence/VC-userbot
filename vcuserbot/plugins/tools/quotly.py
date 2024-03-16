@@ -6,7 +6,7 @@ from pyrogram import filters
 
 from ... import *
 from ...modules.helpers.events import edit_or_reply, extract_user
-
+from ...modules.clients.clients import Client
 
 @app.on_message(cdx("q"))
 @sudo_users_only
