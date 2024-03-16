@@ -3,8 +3,6 @@ import random
 from asyncio import sleep
 
 from pyrogram import filters
-from pyrogram import *
-from pyrogram.types import *
 
 from ... import *
 from ...modules.helpers.events import edit_or_reply, extract_user
