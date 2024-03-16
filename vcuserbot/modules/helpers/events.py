@@ -26,7 +26,7 @@ async def edit_or_replyy(message: Message, *args, **kwargs) -> Message:
         if bool(message.from_user and message.from_user.is_self or message.outgoing)
         else (message.reply_to_message or message).reply_text
     )
-else:
+else
     apa = (
         message.edit_text
         if bool(message.from_user and message.from_user.is_self or message.outgoing)
