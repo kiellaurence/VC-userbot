@@ -21,6 +21,7 @@ async def edit_or_reply(message: Message, *args, **kwargs) -> Message:
     return await msg(*args, **kwargs)
 
 async def edit_or_replyy(message: Message, *args, **kwargs) -> Message:
+    try:
     apa = (
         message.reply_text
         if bool(message.from_user and message.from_user.is_self or message.outgoing)
