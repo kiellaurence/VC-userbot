@@ -12,7 +12,7 @@ from ...modules.helpers.events import edit_or_reply, extract_user
 
 @app.on_message(cdx("q"))
 @sudo_users_only
-async def quotly(client: Client, message: Message):
+async def quotly(bot: Client, message: Message):
     if not message.reply_to_message:
         await message.edit("Reply to any users text message")
         return
@@ -27,7 +27,7 @@ async def quotly(client: Client, message: Message):
     while not is_sticker:
         try:
             await sleep(4)
-            msg = await client.get_history("@QuotLyBot", 1)
+            msg = await bot.get_history("@QuotLyBot", 1)
             print(msg)
             is_sticker = True
         except:
@@ -47,7 +47,7 @@ async def quotly(client: Client, message: Message):
     if msg_id := msg[0]['message_id']:
         await asyncio.gather(
             message.delete(),
-            client.forward_messages(message.chat.id, "@QuotLyBot", msg_id)
+            bot.forward_messages(message.chat.id, "@QuotLyBot", msg_id)
         )
 
 
