@@ -23,7 +23,7 @@ async def leave_vc(client, message):
             except QueueEmpty:
                 pass
             await call.leave_group_call(chat_id)
-            await eor(message, f"**Left VC At `{title}`**")
+            await eor(message, f"Leave VC in `{title}`")
     except GroupCallNotFound:
         await eor(message, "**I am Not in VC!**")
     except Exception as e:
