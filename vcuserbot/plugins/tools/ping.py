@@ -13,7 +13,7 @@ async def ping(client, message):
     start = datetime.now()
     end = datetime.now()
     ms = (end - start).microseconds / 1000
-    await eor(message, f"""<b>Pinged !</b>\n<b>Latency:</b> `{elapsed_seconds}` ms\n<b>On Chat:</b> `{title}`\n<b>Owner:</b> <a href='tg://user?id=6965945364'>k</a>""")
+    await eor(message, f"""<b>Pinged !</b>\n<b>Latency:</b> `{elapsed_seconds}` ms\n<b>On Chat:</b> `{title}`\n<b>Owner:</b> <a href='tg://user?id=8109165166'>k</a>""")
 
 
 
